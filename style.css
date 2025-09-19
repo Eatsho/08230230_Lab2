@@ -1,0 +1,226 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  background-color: #fffdfd; /* clean ivory white */
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  color: #444;
+}
+
+h1, h2, h3 {
+  background: linear-gradient(90deg, #c084fc, #f472b6, #facc15); /* lilac → pink → sunflower */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  color: #f472b6; /* soft rose */
+}
+
+section {
+  padding: 50px 25px;
+}
+
+/* Navigation */
+header {
+  background: #fdf4ff; /* soft lilac */
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  background: #c084fc; /* violet tabs */
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  background: #f472b6; /* pink hover */
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #fdf4ff, #fff1f2);
+  border-radius: 0 0 50px 50px;
+}
+.intro h1 {
+  font-size: 2.8rem;
+}
+.tagline {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Card style */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 30px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* About */
+.about-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fbcfe8; /* blush border */
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about-text {
+  flex: 1;
+}
+
+/* Education */
+.timeline li {
+  margin-bottom: 14px;
+  padding: 14px;
+  border-left: 4px solid #f472b6;
+  background: #fdf2f8;
+  border-radius: 8px;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.skills-container div {
+  flex: 1;
+  margin: 10px;
+}
+.skills-container ul li {
+  list-style: none;
+  background: #bdfa15; /* pastel yellow */
+  color: #333;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 25px;
+  margin: 6px 0;
+  display: inline-block;
+  transition: 0.3s;
+}
+.skills-container ul li:hover {
+  background: #f472b6;
+  color: white;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: #fdf4ff;
+  border: 2px solid #c084fc;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+/* Contact */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+form input, form textarea, form button {
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+form textarea {
+  min-height: 100px;
+}
+form button {
+  background: #f472b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+form button:hover {
+  background: #c084fc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #c084fc;
+  color: white;
+  margin-top: 30px;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic {
+    margin-right: 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  section {
+    padding: 25px;
+  }
+img {
+  width: 80%;
+  border-radius: 15px;
+}
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
